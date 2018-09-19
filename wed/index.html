@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="Scripts/viewport.js"></script>
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>任雪艳&amp;陶永亮-我们的爱</title>
+    <meta name="keywords" content="没有人这样对你，这是我对你的爱">
+    <meta name="description" content="如果可以我可以照顾你一辈子.RXY">
+    <!-- 页面样式入口样式开始 -->
+    <link rel="stylesheet" type="text/css" href="Css/global.css">
+    <!-- 页面样式入口样式结束 -->
+    <style>
+        .open-browser{
+            display: none;
+            width:100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: 100010;
+            background: url(Images/open-in-browser.png) no-repeat 50% 0;
+            background-size: 100%;
+        }
+    .STYLE1 {color: #FF0000}
+    </style>
+    <!-- Seajs入口开始 -->
+    <script src="Scripts/entry.js"></script>
+    <!-- Seajs入口结束 -->
+</head>
+<body style="background-color: #000">
+    <div class="preLoad">
+        <img src="Picture/img-share.png" alt="">
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-1">
+                <a href="javascript:;" class="btn-download"></a>
+                <div class="part-bg"></div>
+                <div class="picSlide picSlide1">
+                    <img src="Picture/pic01.jpg" alt="" class="pic1 is-active">
+                    <img src="Picture/pic02.jpg" alt=""  class="pic2">
+                    <img src="Picture/pic03.jpg" alt=""  class="pic3">
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide-2">
+                <a href="javascript:;" class="btn-down-rig"></a>
+            </div>
+            <div class="swiper-slide swiper-slide-3">
+                <a href="javascript:;" class="btn-down-rig"></a>
+            </div>
+            <div class="swiper-slide swiper-slide-4">
+                <a href="javascript:;" class="btn-down-rig"></a>
+            </div>
+            <div class="swiper-slide swiper-slide-5">
+                <a href="javascript:;" class="btn-download"></a>
+                <a href="javascript:;" class="btn-download"></a>
+                <div class="part-bg"></div>
+                <p class="copyright">CopyRight © <a href="http://www.guihaibk.com/" target="_blank" class="STYLE1">鬼孩博客</a><span>邮箱：841525145@qq.com<br>
+              心语：每个人都应该用真心对待每一段感情，不以结婚为目的恋爱都是耍流氓</p>
+                <div class="picSlide picSlide2">
+                    <img src="Picture/pic01.jpg" alt="" class="pic1 is-active">
+                    <img src="Picture/pic02.jpg" alt=""  class="pic2">
+                    <img src="Picture/pic03.jpg" alt=""  class="pic3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slidedown-area">
+        <span class="btn-slideDown"></span>
+    </div>
+    
+    <div class="noorientation">
+        <p>请使用竖屏浏览</p>
+    </div>
+    <div class="loadingPic" id="loadingPic">
+        <div class="loading"></div>
+    </div>
+    <div class="open-browser"></div>
+</body>
+<script type="text/javascript" src="Scripts/zepto.min.js"></script>
+<script type="text/javascript" src="Scripts/swiper-3.3.0.jquery.min.js"></script>
+<script type="text/javascript" src="Scripts/index.js"></script>
+<!-- 加载图片 -->
+<script src="Scripts/preloadjs.min.js" charset="utf-8"></script>
+<script>
+    var preload = new createjs.LoadQueue(false);
+    preload.addEventListener('complete', loadComplete);
+    preload.loadManifest([
+        '/s/static/me/mobile/img/open-download.jpg',
+        '/s/static/me/mobile/img/loading.png',
+        '/s/static/me/mobile/img/bg-part1.png',
+        '/s/static/me/mobile/img/pic01.jpg',
+        '/s/static/me/mobile/img/pic02.jpg',
+        '/s/static/me/mobile/img/pic03.jpg',
+        '/s/static/me/mobile/img/bg-part2.jpg',
+        '/s/static/me/mobile/img/bg-part3.jpg',
+        '/s/static/me/mobile/img/bg-part4.jpg'
+    ]);
+    function loadComplete(event) {
+        setTimeout(function(){
+            document.getElementById('loadingPic').style.display = 'none';
+                 $('.picSlide1 img').eq(1).addClass('is-active').siblings().removeClass('is-active');
+        }, 2000)
+    }
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c184545c631c5115a489aa9d13ecb990";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</html>
